@@ -10,13 +10,38 @@ namespace LavaPals.Editor
 { 
     public static class UltUtils
     {
-        private const string UltSwapPrefabPath =
-            "Packages/com.lavapals.ultutils/Assets/UltSwap.prefab";
-        private const string UltSwapFromParentPrefabPath =
-            "Packages/com.lavapals.ultutils/Assets/UltSwapFromParent.prefab";
-        
         private static class UltSwapUtils
         {
+            private static GameObject _ultSwapPrefab;
+            public static GameObject UltSwapPrefab
+            {
+                get
+                {
+                    _ultSwapPrefab =
+                        AssetDatabase.LoadAssetAtPath<GameObject>(
+                            "Packages/com.lavapals.ultutils/Assets/UltSwap.prefab") ??
+                        AssetDatabase.LoadAssetAtPath<GameObject>(
+                            "Assets/Packages/com.lavapals.ultutils/Assets/UltSwap.prefab");
+
+                    return _ultSwapPrefab;
+                }
+            }
+            
+            private static GameObject _ultSwapFromParentPrefab;
+            public static GameObject UltSwapFromParentPrefab
+            {
+                get
+                {
+                    _ultSwapFromParentPrefab =
+                        AssetDatabase.LoadAssetAtPath<GameObject>(
+                            "Packages/com.lavapals.ultutils/Assets/UltSwapFromParent.prefab") ??
+                        AssetDatabase.LoadAssetAtPath<GameObject>(
+                            "Assets/Packages/com.lavapals.ultutils/Assets/UltSwapFromParent.prefab");
+
+                    return _ultSwapFromParentPrefab;
+                }
+            }
+            
             private static void RemoveAllComponents(GameObject gameObject)
             {
                 foreach (var comp in gameObject.GetComponents<Component>())
@@ -45,7 +70,7 @@ namespace LavaPals.Editor
 
             internal static void GenerateComponentUltSwapFromParent(Component component, bool destroySource=false)
             {
-                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(UltSwapFromParentPrefabPath);
+                var prefab = UltSwapFromParentPrefab;
                 var instance = Object.Instantiate(prefab, component.transform.parent);
                 instance.transform.SetSiblingIndex(component.transform.GetSiblingIndex() + 1);
 
@@ -82,7 +107,7 @@ namespace LavaPals.Editor
 
             internal static void GenerateAssetsUltSwapFromParent(Object dummyObject)
             {
-                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(UltSwapFromParentPrefabPath);
+                var prefab = UltSwapFromParentPrefab;
                 var instance = Object.Instantiate(prefab);
 
                 var rootHolder = instance.GetComponent<UltEventHolder>();
@@ -107,7 +132,7 @@ namespace LavaPals.Editor
 
             internal static void GenerateAssetsUltSwap(Object dummyObject)
             {
-                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(UltSwapPrefabPath);
+                var prefab = UltSwapPrefab;
                 var instance = Object.Instantiate(prefab);
                 
                 // The dummy GameObject has no use here
@@ -129,7 +154,7 @@ namespace LavaPals.Editor
 
             internal static void GenerateComponentUltSwap(Component component)
             {
-                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(UltSwapPrefabPath);
+                var prefab = UltSwapPrefab;
                 var instance = Object.Instantiate(prefab, component.transform.parent);
                 instance.transform.SetSiblingIndex(component.transform.GetSiblingIndex() + 1);
             
@@ -154,7 +179,7 @@ namespace LavaPals.Editor
 
             internal static void GenerateGameObjectUltSwap(GameObject gameObject)
             {
-                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(UltSwapPrefabPath);
+                var prefab = UltSwapPrefab;
                 var instance = Object.Instantiate(prefab, gameObject.transform.parent);
                 instance.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex() + 1);
             
