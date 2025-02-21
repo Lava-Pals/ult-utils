@@ -7,10 +7,10 @@
 	"dependencies": {
 		"com.holadivinus.blxrcomp": "0.0.3"
 	},
-	"keywords": {
+	"keywords": [
 		"UltUtils",
 		"Ult Events"
-	},
+	],
 	"author": {
 		"name": "Lava Pals",
 		"url": "https://github.com/Lava-Pals"
