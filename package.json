@@ -1,11 +1,11 @@
 {
 	"name": "com.lavapals.ultutils",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"displayName": "Ult Utils",
 	"description": "Adds utilities for working with UltEvents to the context menus in the inspector, hierarchy and project window.",
 	"documentationUrl": "https://github.com/Lava-Pals/ult-utils",
 	"dependencies": {
-		"com.holadivinus.blxrcomp": "https://github.com/holadivinus/BLXRComp.git"
+		"com.holadivinus.blxrcomp": "https://git+github.com/holadivinus/BLXRComp.git"
 	},
 	"keywords": [
 		"UltUtils",
