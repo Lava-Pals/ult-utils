@@ -1,0 +1,20 @@
+{
+    "name": "UltUtilsEditor",
+    "rootNamespace": "LavaPals.UltUtils.Editor",
+    "references": [
+        "GUID:7cd6d904fb8c0034d8cab196b3de4076",
+        "GUID:57a6d82589ae03c4cabdc058f719f231",
+        "GUID:e10496b6cebad5d4dab20184ccfd9c6d"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

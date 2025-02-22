@@ -1,6 +1,6 @@
 {
 	"name": "com.lavapals.ultutils",
-	"version": "2.0.4",
+	"version": "2.0.5",
 	"displayName": "Ult Utils",
 	"description": "ADD 'BLXRCOMP' AS A DEPENDENCY TO THIS PROJECT AS WELL TO PREVENT SCRIPT ERRORS! https://github.com/holadivinus/BLXRComp.git\n\nAdds utilities for working with UltEvents to the context menus in the inspector, hierarchy and project window.",
 	"documentationUrl": "https://github.com/Lava-Pals/ult-utils",

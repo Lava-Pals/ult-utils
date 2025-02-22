@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿#if UNITY_EDITOR
+using System.Collections.Generic;
 using UltUtils.Runtime;
 using UnityEditor;
 using UnityEngine;
@@ -162,3 +163,4 @@ namespace LavaPals.Editor
         }
     }
 }
+#endif
