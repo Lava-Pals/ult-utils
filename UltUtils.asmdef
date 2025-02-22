@@ -1,0 +1,17 @@
+{
+    "name": "UltUtils",
+    "rootNamespace": "LavaPals.UltUtils",
+    "references": [
+        "GUID:7cd6d904fb8c0034d8cab196b3de4076",
+        "GUID:57a6d82589ae03c4cabdc058f719f231"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
