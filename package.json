@@ -5,7 +5,7 @@
 	"description": "Adds utilities for working with UltEvents to the context menus in the inspector, hierarchy and project window.",
 	"documentationUrl": "https://github.com/Lava-Pals/ult-utils",
 	"dependencies": {
-		"com.holadivinus.blxrcomp": "https://github.com/holadivinus/BLXRComp"
+		"com.holadivinus.blxrcomp": "https://github.com/holadivinus/BLXRComp.git"
 	},
 	"keywords": [
 		"UltUtils",
