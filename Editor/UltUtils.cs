@@ -280,7 +280,7 @@ namespace LavaPals.Editor
             CopyAndInvoke(holder.gameObject);
         }
         
-        [MenuItem("CONTEXT/Component/Ult Utils/Convert to Ult Swap/From Parent")]
+        [MenuItem("CONTEXT/Component/Ult Utils/Convert to Ult Swap/Parent Swap")]
         private static void GenerateComponentUltSwapFromParent(MenuCommand menuCommand)
         {
             UltSwapUtils.GenerateComponentUltSwapFromParent((Component)menuCommand.context, destroySource: true);
@@ -301,7 +301,7 @@ namespace LavaPals.Editor
             UltSwapUtils.GenerateAssetsUltSwap(obj);
         }
         
-        [MenuItem("Assets/Ult Utils/Ult Swap/From Parent")]
+        [MenuItem("Assets/Ult Utils/Ult Swap/Parent Swap")]
         private static void GenerateAssetsUltSwapFromParent()
         {
             var obj = Selection.GetFiltered<Object>(SelectionMode.Assets)[0];
